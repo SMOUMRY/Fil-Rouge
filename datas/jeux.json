@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Escape Game",
+        "price": 20,
+        "stockQty": 5,
+        "joueur": "4-6 joueurs",
+        "editor": "Hasbro",
+        "age": "5-10 ans",
+       "image":"images/escape-game.png"
+    },
+    {
+       "id":2,
+       "name": "Twister Junior",
+    "price": 14,
+    "stockQty": 5,
+    "image": "images/twister-junior.png",
+    "joueur": "4-6 joueurs",
+    "editor": "Hasbro",
+    "age": "3-5 ans"
+    },
+    {
+       "id":5,
+       "name": "6 Sense",
+       "price": 17,
+       "stockQty": 5,
+       "image": "images/6-sense.png",
+       "joueur": "4-6 joueurs",
+       "editor": "Dujardin/TF1",
+       "age": "5-10 ans"
+    },
+    {
+       "id":9,
+       "name": "Allie Gator",
+    "price": 21,
+    "stockQty": 5,
+    "image": "images/allie-gator.png",
+    "joueur": "4-6 joueurs",
+    "editor": "Iello",
+    "age": "10+ ans"
+    },
+    {
+       "id":6,
+       "name": "Qui-est-ce",
+    "price": 14,
+    "stockQty": 5,
+    "image": "images/qui-est-ce.png",
+    "joueur": "4-6 joueurs",
+    "editor": "Dujardin/TF1",
+    "age": "5-10 ans"
+    },
+    {
+       "id":3,
+       "name": "Monopoly Junior",
+    "price": 22,
+    "stockQty": 5,
+    "image": "images/monopoly-junior-removebg-preview.png",
+    "joueur": "2-4 joueurs",
+    "editor": "Hasbro",
+    "age": "3-5 ans"
+    },
+    {
+       "id":4,
+       "name": "Chrono_Bomb",
+    "price": 18,
+    "stockQty": 5,
+    "image": "images/chrono-bomb.png",
+    "joueur": "2-4 joueurs",
+    "editor": "Dujardin/TF1",
+    "age": "5-10 ans"
+    },
+    {
+       "id":7,
+       "name": "Adventure Games",
+    "price": 26,
+    "stockQty": 5,
+    "image": "images/Adventure.png",
+    "joueur": "6+ joueurs",
+    "editor": "Iello",
+    "age": "10+ ans"
+    },
+    {
+       "id":8,
+       "name": "Calendrier de l’Avent",
+    "price": 23,
+    "stockQty": 5,
+    "image": "images/exit.png",
+    "joueur": "6+ joueurs",
+    "editor": "Iello",
+    "age": "10+ ans"
+    }
+ ]

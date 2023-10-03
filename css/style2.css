@@ -1,0 +1,163 @@
+NORMALIZER
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+dl, dt, dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* POSITION ITEMS */
+#jeux-container{
+    list-style-type: none;
+}
+
+.dropdown{
+    margin-top: 30px;
+}
+
+.filtre{
+    padding-left: 80px;
+}
+
+.filter-mobile{
+    display: none;
+}
+
+.jeu-itm{
+    margin-top: 150px;
+}
+
+.jeux{
+    margin-top: -100px;
+}
+
+.footer{
+    margin-top: 100px;
+}
+
+/*RESPONSIVE ITEM */
+
+/* @media screen and (max-width: 992px){
+    .jeu-itm{
+        width: 49%;
+        margin-left: -60px;
+    }
+} */
+@media screen and (max-width: 992px){
+    .jeu-img{
+        width: 200px !important;
+        height: 50% !important;
+    }
+    .jeux{
+        align-items: flex-end;
+    }
+    .filtre{
+        display: none;
+    }
+    .logo{
+        position: relative;
+    }
+
+    .filter-mobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 134px;
+        left: 95px;
+    }
+    .cont{
+        --bs-gutter-x: 0 !important;
+        --bs-gutter-y: 0 !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+      .game{
+        justify-content: space-around;
+      }
+}
+@media screen and (max-width: 800px){
+    .jeu-itm{
+        width: 49%;
+    }
+    .filter-mobile{
+        left: 55px;
+    }
+}
+@media screen and (max-width: 524px){
+    .filter-mobile{
+        left: 22px;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    .jeu-itm{
+        width: 100%;
+    }
+    .filter-mobile{
+        left: 2px;
+    }
+    .btn{
+        margin-top: -10px;
+    }
+}
+
+
+@media (min-width: 768px){
+ .container {
+    max-width: 100% !important;
+}
+}
+
+@media (min-width: 576px){
+    .container {
+       max-width: 100% !important;
+   }
+}
+
+/* Active */
+
+.active1{
+    display: none;
+}

@@ -1,0 +1,140 @@
+/* CART */
+
+.cart {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+.cart-img {
+    width: 3rem;
+}
+.cart-nb {
+    position: absolute;
+    top: -.5rem;
+    right: -.5rem;
+    display: flex;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-weight: bold;  
+
+}
+
+/* SEARCH */
+
+.main-search{
+    position: absolute;
+    right: 200px
+}
+@media screen and (max-width: 992px){
+    .main-search{
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-search{
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .main-search{
+        right: 50px;
+    }
+}
+
+/* SideNav */
+
+.sidenav{
+    display: none;
+}
+
+
+@media screen and (max-width: 992px){
+    /* Menu coté */
+.sidenav {
+    display: block;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  
+  /* Menu coté texte */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #111;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Active class */
+  .sidenav.active {
+    left: 0;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  /* Icône burger */
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+    .navbar{
+        display: none;
+    }
+}
+
+/* ADD */
+
+.add-qty {
+    width: 20%;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+}
+
+/* HR */
+
+.space{
+    margin: 100px;
+}
+
+/* Filter */
+.filter{
+    margin-top: 70px;
+}
