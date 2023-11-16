@@ -17,7 +17,7 @@
     <div id="mySidenav" class="sidenav">
       <a id="closeBtn" href="#" class="close">x</a>
       <ul>
-        <li><a href="jeu-familiale.html">Jeu Familiale</a></li>
+        <li><a href="jeu-familiale.php">Jeu Familiale</a></li>
         <li><a href="#">Adulte</a></li>
         <li><a href="#">Casse-tête</a></li>
         <li><a href="#">Puzzle</a></li>
@@ -41,7 +41,7 @@
             </span>
           </div>
         </div>
-        <div class="navbar-header col-xs-8 align-items-center text-center"><a href="index.html"><img
+        <div class="navbar-header col-xs-8 align-items-center text-center"><a href="index.php"><img
               class="img-fluid logo" alt="themini" src="images/logo-removebg-preview.png"></a>
         </div>
         <div class="shopcart">
@@ -64,7 +64,7 @@
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item me-lg-10">
-            <a class="nav-link active" aria-current="page" href="jeu-familiale.html">Jeu Familiale</a>
+            <a class="nav-link active" aria-current="page" href="jeu-familiale.php">Jeu Familiale</a>
           </li>
           <li class="nav-item ms-lg-5">
             <a class="nav-link active" aria-current="page" href="#">Adulte</a>

@@ -1,3 +1,9 @@
+<?php
+require_once 'vendor/autoload.php';
+include 'php/db.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -45,7 +51,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="navbar-header col-xs-8 align-items-center text-center"><a href="index.html"><img class="img-fluid logo"
+                    <div class="navbar-header col-xs-8 align-items-center text-center"><a href="index.php"><img class="img-fluid logo"
                             alt="themini" src="images/logo-removebg-preview.png"></a>
                     </div>
                     <div class="shopcart">
