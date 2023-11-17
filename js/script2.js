@@ -10,45 +10,45 @@ async function fetchJeuxData(url) {
 
 fetchJeuxData('datas/jeux.json')
     .then((jeux) => {
-        displayJeux(jeux);
+        // displayJeux(jeux);
         filterElement();
         addQty()
     })
 
-function displayJeux(jeux) {
-    document.getElementById('jeux-container').append(...jeux.map(createJeuElement));
-}
+// function displayJeux(jeux) {
+//     document.getElementById('jeux-container').append(...jeux.map(createJeuElement));
+// }
 
-function createJeuElement(jeu) {
-    // Copy template
-    const jeuElement = document.importNode(document.getElementById('jeu-template').content, true);
+// function createJeuElement(jeu) {
+//     // Copy template
+//     const jeuElement = document.importNode(document.getElementById('jeu-template').content, true);
 
-    // Put the name
-    jeuElement.querySelector('.jeu-ttl').textContent = jeu.name;
+//     // Put the name
+//     jeuElement.querySelector('.jeu-ttl').textContent = jeu.name;
 
-    // Set data-id
-    jeuElement.querySelector('.jeu-itm').dataset.id = jeu.id;
+//     // Set data-id
+//     jeuElement.querySelector('.jeu-itm').dataset.id = jeu.id;
 
-    // Set data-editor
-    jeuElement.querySelector('.jeu-itm').dataset.editor = jeu.editor;
+//     // Set data-editor
+//     jeuElement.querySelector('.jeu-itm').dataset.editor = jeu.editor;
 
-    // Set data-players
-    jeuElement.querySelector('.jeu-itm').dataset.joueur = jeu.joueur;
+//     // Set data-players
+//     jeuElement.querySelector('.jeu-itm').dataset.joueur = jeu.joueur;
 
-    // Set data-age
-    jeuElement.querySelector('.jeu-itm').dataset.age = jeu.age;
+//     // Set data-age
+//     jeuElement.querySelector('.jeu-itm').dataset.age = jeu.age;
 
-    // Change image
-    const img = jeuElement.querySelector('.jeu-img');
-    img.src = jeu.image;
-    img.alt = jeu.name;
+//     // Change image
+//     const img = jeuElement.querySelector('.jeu-img');
+//     img.src = jeu.image;
+//     img.alt = jeu.name;
 
-    // Price
+//     // Price
 
-    jeuElement.querySelector('.jeu-price').textContent = jeu.price
+//     jeuElement.querySelector('.jeu-price').textContent = jeu.price
 
-    return jeuElement;
-}
+//     return jeuElement;
+// }
 
 // Filter
 

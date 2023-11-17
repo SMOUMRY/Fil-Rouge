@@ -197,6 +197,7 @@ include 'php/db.php';
                 </div>
                 <div class="col-10">
                     <ul id="jeux-container" class="jeux d-flex flex-wrap">
+                        <?php include 'php/display_product.php'; ?>
                     </ul>
                 </div>
             </div>
