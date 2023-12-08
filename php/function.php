@@ -8,3 +8,19 @@ function generateToken()
     }
 }
 
+/**
+ * Run the basic verification for token and REFERER to avoid CSRF 
+ * injection.
+ * Redirect in case of error.
+ *
+ * @param string $url
+ * @return void
+ */
+function checkCSRF(string $url): void
+{
+    if (!isset($_SERVER['HTTP_REFERER']) || !str_contains($_SERVER['HTTP_REFERER'], 'http://localhost/Fil%20Rouge/')) {
+        exit;
+    } else if (!isset($_SESSION['token'])  || $_SESSION['tokenExpire'] < time()) {
+        exit;
+    }
+}

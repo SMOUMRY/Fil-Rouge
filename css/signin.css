@@ -1,0 +1,180 @@
+/* FONTS */
+
+
+/* Regular SAIRA */
+@font-face {
+    font-family: 'saira-thin';
+    src: url('../font/Saira_SemiCondensed-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'saira-light';
+    src: url('../font/Saira_SemiCondensed-Light.ttf');
+}
+
+@font-face {
+    font-family: 'saira-semibold';
+    src: url('../font/Saira_SemiCondensed-SemiBold.ttf');
+}
+
+/*  Italic SAIRA */
+@font-face {
+    font-family: 'saira-thin-italic';
+    src: url('../font/Saira_SemiCondensed-ThinItalic.ttf');
+}
+
+@font-face {
+    font-family: 'saira-light-italic';
+    src: url('../font/Saira_SemiCondensed-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'saira-semibold-italic';
+    src: url('../font/Saira_SemiCondensed-SemiBoldItalic.ttf');
+}
+
+/* VAR */
+
+:root {
+    --main-bg-color: #CA965C;
+    --dark-brown: #876445;
+    --beige: #EEC373;
+    --light-brown: #F4DFBA;
+}
+
+
+/* Global CSS */
+
+/* MOBILE FIRST */
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'saira-light', Arial, Helvetica, sans-serif;
+    line-height: 1.5rem !important;
+}
+
+.account {
+    background-color: var(--dark-brown);
+    /* height: calc(70vh - 6rem); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border: solid var(--light-brown) .1rem;
+    color: var(--light-brown);
+}
+
+.account h1 {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+}
+
+.creation__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.creation__form input {
+    width: 80%;
+    margin-bottom: 1.25rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: solid .1rem var(--light-brown);
+    background-color: var(--light-brown);
+}
+
+.creation__form label {
+    margin-bottom: 1rem;
+}
+
+.creation__form input[type="submit"] {
+    width: 50%;
+    margin-top: 2rem;
+    background-color: var(--beige);
+}
+
+.creation__form input::placeholder {
+    font-size: 1rem;
+    color: var(--dark-brown);
+    text-align: center;
+}
+
+.creation__form p {
+    margin-bottom: .5rem;
+    text-align: center;
+    background-color:#EEC37333;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+#passwordStrength {
+    height: auto;
+    margin-top: 10px;
+    transition: width 0.5s;
+    margin-top: -.5rem;
+}
+
+#strengthText {
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.invalid-password {
+    border: 2px solid red;
+  }
+
+
+.rgpd {
+    padding: .5rem;
+    font-size: .75rem;
+}
+
+.copyright {
+    display: none;
+}
+
+@media screen and (min-width: 796px) {
+
+    .creation__form label{
+        font-size: 1.5rem;
+    }
+    .creation__form input {
+        width: 50%;
+    }
+    .creation__form input[type="submit"] {
+        width: 35%;
+        background-color: var(--beige);
+    }
+    .account {
+        width: 60%;
+        margin: auto;
+    }
+    .account h1 {
+        font-size: 3rem;
+        width: 100%;
+        border-bottom: solid .1rem var(--light-brown);
+        margin: auto;
+        padding: 1.5rem .5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .rgpd {
+        margin: auto;
+        width: 60%;
+        font-size: 1rem;
+    }
+
+    .copyright {
+        display: block;
+        color: var(--light-brown);
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

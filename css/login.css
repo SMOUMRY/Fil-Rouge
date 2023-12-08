@@ -1,0 +1,155 @@
+/* LOGIN CSS */
+:root {
+    --main-bg-color: #CA965C;
+    --dark-brown: #876445;
+    --beige: #EEC373;
+    --light-brown: #F4DFBA;
+}
+
+/* MOBILE FIRST */
+
+a {
+    text-decoration: none;
+}
+
+.account {
+    background-color: var(--dark-brown);
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: solid var(--light-brown) .1rem;
+    color: var(--light-brown);
+}
+
+.account h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.account__form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    /* height: 25vh; */
+}
+
+.form__username,
+.form__pwd {
+    width: 80%;
+    margin-bottom: 1.25rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: solid .1rem var(--light-brown);
+    background-color: var(--light-brown);
+    
+}
+
+.form__memory {
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+
+.form__username::placeholder,
+.form__pwd::placeholder {
+    font-size: 1rem;
+    color: var(--dark-brown);
+    text-align: center;
+}
+
+.account__create {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.account__create p {
+    margin-bottom: 1rem;
+}
+
+
+
+.guest {
+    margin-top: .5rem;
+    background-color: var(--dark-brown);
+    /* height: 12vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: solid var(--light-brown) .1rem;
+    color: var(--light-brown);
+    font-size: .75rem;
+}
+
+.copyright {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+
+/* TABLET SCREEN */
+
+@media (min-width: 796px) {
+
+    .account,
+    .guest {
+        width: 60%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .account h2 {
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+
+    }
+
+    .guest p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .logo__lnk {
+        font-size: 4rem;
+    }
+
+    .form__username,
+    .form__pwd {
+        width: 25vw;
+    }
+
+    .account__create p {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        font-size: 1.25rem;
+        background-color: var(--dark-brown);
+    }
+
+    .rgpd {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .copyright {
+        display: block;
+        color: var(--light-brown);
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

@@ -22,6 +22,7 @@ generateToken();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body class="bg-light">
@@ -66,16 +67,16 @@ generateToken();
             </div>
         </div>
         <?php
-            if (isset($_SESSION['notification'])){
-                $notif = $_SESSION['notification'];
-                echo "<div class='notif'>{$msg[$notif]}</div>";
-                unset($_SESSION['notification']);
-            }
-            else if(isset($_SESSION['error'])){
-                $error = $_SESSION['error'];
-                echo "<div class='error'>{$msg[$error]}</div>";
-                unset($_SESSION['error']);
-            }
+        // if (isset($_SESSION['notification'])) {
+        //     $notif = $_SESSION['notification'];
+        //     echo "<div class='notif'>{$msg[$notif]}</div>";
+        //     unset($_SESSION['notification']);
+        // } else if (isset($_SESSION['error'])) {
+        //     $error = $_SESSION['error'];
+        //     echo "<div class='error'>{$msg[$error]}</div>";
+        //     unset($_SESSION['error']);
+        // }
+        // 
         ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
             <div class="container-fluid">
@@ -106,107 +107,22 @@ generateToken();
         </nav>
     </header>
     <main>
-        <div class="container filter-mobile">
-            <div class="row d-flex justify-content-around">
-                <div class="col-4 filter">
-                    <h2 class="filter">Age</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">3-5 ans</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">5-10 ans</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">10+ ans</button></li>
-                        </ul>
-                    </div>
+    <form class='account__form' action="user_connexion.php" method="POST">
+                <input type="hidden" name="token" value=<?= $_SESSION['token'] ?>>
+                <i class='icon__username'></i>
+                <input class='form__username' type="text" name="username" id="" placeholder="Username">
+                <i class='icon__password'></i>
+                <input class='form__pwd' type="password" name="password" id="" placeholder='Password'>
+                <div>
+                    <input type="checkbox" name="" id="">
+                    <label class='form__memory' for="">Mémorisez le mot de passe.</label>
                 </div>
-                <div class="col-4 filter">
-                    <h2 class="filter">Editeur</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Hasbro</button></li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Dujardin/TF1</button>
-                            </li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Iello</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4 filter">
-                    <h2 class="filter">Joueurs</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">2-4 joueurs</button>
-                            </li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">4-6 joueurs</button>
-                            </li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">6+ joueurs</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <input class='btn' type="submit" name='login' value="Connexion">
+            </form>
+            <div class='account__create'>
+                <p>Pas encore inscrit ? Immergez vous !</p>
+                <a href='signin.php' class='btn'>Inscription</a>
             </div>
-        </div>
-        <div class="container cont">
-            <div class="row align-items-center game">
-                <div class="col-sm-2 filtre">
-                    <h2 class="filter">Age</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">3-5 ans</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">5-10 ans</button></li>
-                            <li class="filtre-item-age"><button class="dropdown-item" href="">10+ ans</button></li>
-                        </ul>
-                    </div>
-                    <h2 class="filter">Editeur</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Hasbro</button></li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Dujardin/TF1</button>
-                            </li>
-                            <li class="filtre-item-editor"><button class="dropdown-item" href="">Iello</button></li>
-                        </ul>
-                    </div>
-                    <h2 class="filter">Joueurs</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tous
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">Tous</button></li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">2-4 joueurs</button>
-                            </li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">4-6 joueurs</button>
-                            </li>
-                            <li class="filtre-item-joueur"><button class="dropdown-item" href="">6+ joueurs</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-10">
-                    <ul id="jeux-container" class="jeux d-flex flex-wrap">
-                        <?php include 'php/display_product.php'; ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </main>
     <footer class="bg-dark text-center text-white mt-5">
         <div class="container p-4 footer">

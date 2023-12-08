@@ -52,32 +52,16 @@ VALUES ("jeu familiale")
 
 // PRODUCT TABLE
 
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Escape Game', 20, 'Hasbro', '5-10 ans', '4-6 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Twister Junior', 14, 'Hasbro', '3-5 ans', '4-6 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('6 Sense', 17, 'Dujardin/TF1', '5-10 ans', '4-6 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Allie Gator', 21, 'Iello', '10+ ans', '4-6 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Qui-est-ce', 14, 'Dujardin/TF1', '5-10 ans', '4-6 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Monopoly Junior', 22, 'Hasbro', '3-5 ans', '2-4 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Chrono_Bomb', 18, 'Dujardin/TF1', '5-10 ans', '2-4 joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Adventure Games', 26, 'Iello', '10+ ans', '6+ joueurs', 5, 1);
-
-INSERT INTO product (name_product, price, editor, age, players, quantity, id_categorie)
-VALUES ('Calendrier de l’Avent', 23, 'Iello', '10+ ans', '6+ joueurs', 5, 1);
+INSERT INTO product (name_product, price, editor, age, players, image, id_categorie)
+VALUES ('Escape Game', 20, 'Hasbro', '5-10 ans', '4-6 joueurs','escape-game.png', 1),
+('Twister Junior', 14, 'Hasbro', '3-5 ans', '4-6 joueurs','twister-junior.png', 1),
+('6 Sense', 17, 'Dujardin/TF1', '5-10 ans', '4-6 joueurs','6-sense.png', 1),
+('Allie Gator', 21, 'Iello', '10+ ans', '4-6 joueurs','allie-gator.png', 1),
+('Qui-est-ce', 14, 'Dujardin/TF1', '5-10 ans', '4-6 joueurs','qui-est-ce.png', 1),
+('Monopoly Junior', 22, 'Hasbro', '3-5 ans', '2-4 joueurs','monopoly-junior.png', 1),
+('Chrono_Bomb', 18, 'Dujardin/TF1', '5-10 ans', '2-4 joueurs','chrono-bomb.png', 1),
+('Adventure Games', 26, 'Iello', '10+ ans', '6+ joueurs','Adventure.png', 1),
+('Calendrier de l’Avent', 23, 'Iello', '10+ ans', '6+ joueurs','exit.png', 1);
 
 // CUSTOMER CATEGORIE 
 

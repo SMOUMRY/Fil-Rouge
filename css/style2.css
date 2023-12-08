@@ -60,6 +60,11 @@ button:focus {
     display: none;
 }
 
+.link{
+    text-decoration: none;
+    color: white;
+}
+
 .jeu-itm{
     margin-top: 150px;
 }
@@ -160,4 +165,43 @@ button:focus {
 
 .active1{
     display: none;
+}
+
+.notif{
+    position:absolute;
+    top:150px;
+    left:50px;
+    background-color: lightgreen !important;
+    width: auto;
+}
+
+.error{
+    position:absolute;
+    top:150px;
+    left:50px;
+    background-color: red !important;
+    width: auto;
+}
+
+.validate{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.total{
+    font-size: 45px;
+    margin-right: 30px;
+}
+
+.sub{
+    width: 200px;
+    font-size: 25px;
+}
+
+.cross{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: -40px;
+    margin-right: 80px;
 }

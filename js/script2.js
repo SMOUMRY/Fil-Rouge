@@ -12,7 +12,6 @@ fetchJeuxData('datas/jeux.json')
     .then((jeux) => {
         // displayJeux(jeux);
         filterElement();
-        addQty()
     })
 
 // function displayJeux(jeux) {
@@ -86,24 +85,5 @@ function filterElement() {
                 if (event.target.textContent === all) game.classList.remove('active1');
             });
         });
-    });
-}
-
-function addQty() {
-    document.querySelectorAll(".cart-item").forEach(btn => {
-        btn.addEventListener("click", function (event) {
-            order += parseInt(event.target.closest(".item").querySelector(".add-qty").value);
-            localStorage.setItem("cart", order);
-            if (order <= 99) document.querySelector(".cart-nb").textContent = order;
-            else document.querySelector(".cart-nb").textContent = "+99";
-        })
-    });
-}
-
-function onLoad() {
-    window.addEventListener('load', function () {
-        if (localStorage.getItem("cart") === null) return;
-        document.querySelector(".cart-nb").textContent = parseInt(localStorage.getItem("cart"));
-        order = parseInt(localStorage.getItem("cart"));
     });
 }
