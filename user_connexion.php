@@ -51,12 +51,12 @@ if (isset($_REQUEST['signin'])) {
             if (!$userCreation->rowCount()) throw new Exception("Problème de requête");
             /* Redirect to login in case of sucess */
             if ($dbCo->commit()) {
-                $_SESSION['success'] = 'Compte crée avec succès. Veuillez vous connecter.';
-                header('Location: index.php');
+                $_SESSION['notification'] = 'created';
+                header('Location: login.php');
             }
         } catch (Exception $error) {
             $dbCo->rollBack();
-            $_SESSION['error'] = $error->getMessage();
+            $_SESSION['error'] = "not_created";
             header('Location: signin.php');
         }
     }
@@ -81,13 +81,14 @@ if (isset($_REQUEST['login'])) {
                 var_dump('oui');
                 $_SESSION['user_id'] = $user['id_user'];
                 $_SESSION['expiracy'] = time() + 20 * 60;
+                $_SESSION['notification'] = 'connected';
                 header('Location: index.php');
             } else throw new Exception('Mot de passe incorrect');
 
             if (!$dbCo->commit()) throw new Exception('Erreur de commit en BDD');
         } catch (Exception $error) {
             $dbCo->rollBack();
-            $_SESSION['error'] = 'Mot de passe incorrect';
+            $_SESSION['error'] = 'password';
             header("Location: login.php");
         }
     }

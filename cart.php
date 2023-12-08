@@ -44,6 +44,18 @@ generateToken();
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
+        <?php
+          if(!isset($_SESSION['user_id'])){
+            echo "<div class=\"btn-co\">
+                    <button class=\"co\"><a href=\"login.php\" class=\"b\">Connexion</a></button>
+                  </div>";
+          }
+          else{
+            echo "<div class=\"btn-deco\">
+                    <button class=\"deco\"><a href=\"logout.php\" class=\"a\">Deconnexion</a></button>
+                  </div>";
+          }
+          ?>
           <div class="main-search mt_40">
             <input id="search-input" name="search" value="" placeholder="Recherche" autocomplete="off" type="text">
             <span class="input-group-btn">
@@ -103,7 +115,15 @@ generateToken();
   </nav>
   <main>
     <div class="col-12">
-      <form action="valide.php" method="POST">
+      <form action="<?php
+      if(isset($_SESSION['user_id']))
+      {echo "create_customer.php";
+        $_SESSION['notification'] = "customer";
+      }
+      else{
+        echo "login.php";
+        $_SESSION['notification'] = "not_connected";
+      }?>" method="POST">
         <ul id="jeux-container" class="jeux d-flex flex-wrap">
           <?= include 'php/display_cart.php' ?>
         </ul>

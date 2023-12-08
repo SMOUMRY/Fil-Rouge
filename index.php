@@ -6,7 +6,6 @@ include 'php/notif.php';
 
 session_start();
 generateToken();
-var_dump($_SESSION);
 $_SESSION['panier'] = array();
 ?>
 <!DOCTYPE html>
@@ -45,6 +44,18 @@ $_SESSION['panier'] = array();
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
+          <?php
+          if(!isset($_SESSION['user_id'])){
+            echo "<div class=\"btn-co\">
+                    <button class=\"co\"><a href=\"login.php\" class=\"b\">Connexion</a></button>
+                  </div>";
+          }
+          else{
+            echo "<div class=\"btn-deco\">
+                    <button class=\"deco\"><a href=\"logout.php\" class=\"a\">Deconnexion</a></button>
+                  </div>";
+          }
+          ?>
           <div class="main-search mt_40">
             <input id="search-input" name="search" value="" placeholder="Recherche" autocomplete="off" type="text">
             <span class="input-group-btn">
@@ -56,7 +67,7 @@ $_SESSION['panier'] = array();
               class="img-fluid logo" alt="themini" src="images/logo-removebg-preview.png"></a>
         </div>
         <div class="shopcart">
-          <a class="cart" href="#">
+          <a class="cart" href="cart.php">
             <img class="cart-img" src="images/cart_icon_160296.png" alt="panier">
             <span class="cart-nb">0</span>
           </a>
@@ -65,6 +76,17 @@ $_SESSION['panier'] = array();
     </div>
   </div>
   </div>
+  <?php
+        if (isset($_SESSION['notification'])) {
+            $notif = $_SESSION['notification'];
+            echo "<div class='notif'>{$msg[$notif]}</div>";
+            unset($_SESSION['notification']);
+        } else if (isset($_SESSION['error'])) {
+            $error = $_SESSION['error'];
+            echo "<div class='error'>{$msg[$error]}</div>";
+            unset($_SESSION['error']);
+        }
+        ?>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"

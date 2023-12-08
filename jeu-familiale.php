@@ -47,6 +47,18 @@ generateToken();
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
+                    <?php
+          if(!isset($_SESSION['user_id'])){
+            echo "<div class=\"btn-co\">
+                    <button class=\"co\"><a href=\"login.php\" class=\"b\">Connexion</a></button>
+                  </div>";
+          }
+          else{
+            echo "<div class=\"btn-deco\">
+                    <button class=\"deco\"><a href=\"logout.php\" class=\"a\">Deconnexion</a></button>
+                  </div>";
+          }
+          ?>
                         <div class="main-search mt_40">
                             <input id="search-input" name="search" value="" placeholder="Recherche" autocomplete="off" type="text">
                             <span class="input-group-btn">

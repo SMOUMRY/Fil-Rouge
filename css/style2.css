@@ -163,25 +163,6 @@ button:focus {
 
 /* Active */
 
-.active1{
-    display: none;
-}
-
-.notif{
-    position:absolute;
-    top:150px;
-    left:50px;
-    background-color: lightgreen !important;
-    width: auto;
-}
-
-.error{
-    position:absolute;
-    top:150px;
-    left:50px;
-    background-color: red !important;
-    width: auto;
-}
 
 .validate{
     display: flex;

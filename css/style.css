@@ -142,3 +142,57 @@
 .hidden{
     display: none;
 }
+.btn-co{
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    font-size: 24px;
+    color: white;
+    width: 100px !important;
+}
+.btn-deco{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    font-size: 24px;
+    color: white;
+    width: 100px !important;
+}
+.co{
+    background-color: darkblue;
+    color: black;
+    width: auto !important;
+    height: auto !important;
+}
+.deco{
+    background-color: red;
+    width: auto !important;
+    height: auto !important;
+}
+.a{
+    color: white;
+    text-decoration: none;
+}
+.b{
+    color: white;
+    text-decoration: none;
+}
+.active1{
+    display: none;
+}
+
+.notif{
+    position:absolute;
+    top:150px;
+    left:50px;
+    background-color: lightgreen !important;
+    width: auto;
+}
+
+.error{
+    position:absolute;
+    top:150px;
+    left:50px;
+    background-color: red !important;
+    width: auto;
+}

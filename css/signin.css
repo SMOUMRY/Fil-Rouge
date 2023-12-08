@@ -50,7 +50,7 @@
 body {
     background-color: var(--main-bg-color);
     font-family: 'saira-light', Arial, Helvetica, sans-serif;
-    line-height: 1.5rem !important;
+    line-height: 1.5rem ;
 }
 
 .account {

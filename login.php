@@ -48,6 +48,17 @@ generateToken();
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
+                        <?php
+                        if (!isset($_SESSION['user_id'])) {
+                            echo "<div class=\"btn-co\">
+                    <button class=\"co\"><a href=\"login.php\" class=\"b\">Connexion</a></button>
+                  </div>";
+                        } else {
+                            echo "<div class=\"btn-deco\">
+                    <button class=\"deco\"><a href=\"logout.php\" class=\"a\">Deconnexion</a></button>
+                  </div>";
+                        }
+                        ?>
                         <div class="main-search mt_40">
                             <input id="search-input" name="search" value="" placeholder="Recherche" autocomplete="off" type="text">
                             <span class="input-group-btn">
@@ -67,16 +78,16 @@ generateToken();
             </div>
         </div>
         <?php
-        // if (isset($_SESSION['notification'])) {
-        //     $notif = $_SESSION['notification'];
-        //     echo "<div class='notif'>{$msg[$notif]}</div>";
-        //     unset($_SESSION['notification']);
-        // } else if (isset($_SESSION['error'])) {
-        //     $error = $_SESSION['error'];
-        //     echo "<div class='error'>{$msg[$error]}</div>";
-        //     unset($_SESSION['error']);
-        // }
-        // 
+        if (isset($_SESSION['notification'])) {
+            $notif = $_SESSION['notification'];
+            echo "<div class='notif'>{$msg[$notif]}</div>";
+            unset($_SESSION['notification']);
+        } else if (isset($_SESSION['error'])) {
+            $error = $_SESSION['error'];
+            echo "<div class='error'>{$msg[$error]}</div>";
+            unset($_SESSION['error']);
+        }
+        
         ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
             <div class="container-fluid">
@@ -107,22 +118,22 @@ generateToken();
         </nav>
     </header>
     <main>
-    <form class='account__form' action="user_connexion.php" method="POST">
-                <input type="hidden" name="token" value=<?= $_SESSION['token'] ?>>
-                <i class='icon__username'></i>
-                <input class='form__username' type="text" name="username" id="" placeholder="Username">
-                <i class='icon__password'></i>
-                <input class='form__pwd' type="password" name="password" id="" placeholder='Password'>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label class='form__memory' for="">Mémorisez le mot de passe.</label>
-                </div>
-                <input class='btn' type="submit" name='login' value="Connexion">
-            </form>
-            <div class='account__create'>
-                <p>Pas encore inscrit ? Immergez vous !</p>
-                <a href='signin.php' class='btn'>Inscription</a>
+        <form class='account__form' action="user_connexion.php" method="POST">
+            <input type="hidden" name="token" value=<?= $_SESSION['token'] ?>>
+            <i class='icon__username'></i>
+            <input class='form__username' type="text" name="username" id="" placeholder="Username">
+            <i class='icon__password'></i>
+            <input class='form__pwd' type="password" name="password" id="" placeholder='Password'>
+            <div>
+                <input type="checkbox" name="" id="">
+                <label class='form__memory' for="">Mémorisez le mot de passe.</label>
             </div>
+            <input class='btn' type="submit" name='login' value="Connexion">
+        </form>
+        <div class='account__create'>
+            <p>Pas encore inscrit ? Immergez vous !</p>
+            <a href='signin.php' class='btn'>Inscription</a>
+        </div>
     </main>
     <footer class="bg-dark text-center text-white mt-5">
         <div class="container p-4 footer">
